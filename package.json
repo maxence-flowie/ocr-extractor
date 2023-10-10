@@ -1,6 +1,6 @@
 {
   "name": "@flowie-app/ocr-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ocr extractor for React",
   "author": "@maxence-flowie",
   "license": "MIT",
