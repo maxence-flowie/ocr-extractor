@@ -54,6 +54,7 @@ describe('zoom', () => {
         stage as Konva.Stage,
         deltaY,
         options as AnnotationViewerOptions,
+        false,
       )
 
       expect(actual).to.deep.equal(expected)

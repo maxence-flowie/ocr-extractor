@@ -70,6 +70,7 @@ export const calculateStageZoom = (
   stage: Konva.Stage,
   deltaY: number,
   options: AnnotationViewerOptions,
+  isTrackPad: boolean,
 ) => {
   const oldScale = stage.scaleX()
 
@@ -82,8 +83,9 @@ export const calculateStageZoom = (
   }
 
   const { modifier } = options.zoom!
+  const finalModifier = isTrackPad ? Math.max(modifier * .8, 1.07) : modifier
 
-  const newScale = deltaY < 0 ? oldScale * modifier : oldScale / modifier
+  const newScale = deltaY < 0 ? oldScale * finalModifier : oldScale / finalModifier
 
   const newPos = {
     x: roundTo(pointerPosition.x - mousePointTo.x * newScale, 2),
@@ -109,6 +111,7 @@ export const handleStageZoom = (
     stage,
     event.evt.deltaY,
     options,
+    event.evt.ctrlKey,
   )
 
   if (newScale > max) return
