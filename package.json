@@ -1,12 +1,12 @@
 {
   "name": "@flowie-app/ocr-extractor",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Ocr extractor for React",
   "author": "@maxence-flowie",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxence-flowie/ocr-extractor"
+    "url": "git+https://github.com/maxence-flowie/ocr-extractor.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/flowie-app"
@@ -85,5 +85,15 @@
     "processing",
     "computer",
     "vision"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/maxence-flowie/ocr-extractor/issues"
+  },
+  "homepage": "https://github.com/maxence-flowie/ocr-extractor#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "exports": {
+    ".": "./dist/index.mjs"
+  }
 }
